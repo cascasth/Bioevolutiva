@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bioevolutiva Consciente</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #080706;
+      color: #f7efe3;
+      line-height: 1.7;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 80px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at center, rgba(212, 168, 91, 0.16), transparent 35%),
+        linear-gradient(to bottom, #050403, #11100e 55%, #080706);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 620px;
+      border-radius: 50%;
+      background: linear-gradient(to right, transparent, rgba(216, 173, 89, 0.22), transparent);
+      filter: blur(12px);
+      opacity: 0.45;
+    }
+
+    .particles {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(226, 187, 107, .55) 1px, transparent 1px);
+      background-size: 80px 80px;
+      opacity: 0.18;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 780px;
+      z-index: 2;
+    }
+
+.logo{
+    width:180px;
+    max-width:60vw;
+    margin-bottom:30px;
+    filter: drop-shadow(0 0 12px rgba(216,173,89,.25));
+}
+
+    .eyebrow {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #d8ad59;
+      font-size: 0.82rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: 0.95;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .hero p {
+      font-size: clamp(1.2rem, 2.8vw, 1.9rem);
+      max-width: 620px;
+      margin: 0 auto 14px;
+    }
+
+    .divider {
+      color: #d8ad59;
+      margin: 34px 0;
+      letter-spacing: 10px;
+    }
+
+    .keywords {
+      font-size: 1.05rem;
+      letter-spacing: 3px;
+      color: #e7c98b;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 90px 24px;
+    }
+
+    .soft {
+      background:
+        radial-gradient(circle at 85% 5%, rgba(199, 126, 148, 0.38), transparent 22%),
+        radial-gradient(circle at 80% 12%, rgba(162, 126, 198, 0.35), transparent 28%),
+        #efe3d2;
+      color: #30231d;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 28px;
+      color: inherit;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      max-width: 850px;
+      margin-bottom: 32px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .card {
+      border: 1px solid rgba(216, 173, 89, 0.36);
+      padding: 28px 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .soft .card {
+      background: rgba(255, 255, 255, 0.45);
+      border-color: rgba(90, 58, 38, 0.18);
+    }
+
+    .card h3 {
+      color: #d8ad59;
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .soft .card h3 {
+      color: #7b4d5e;
+    }
+
+    .dark-section {
+      background: #0b0908;
+    }
+
+    .quote {
+      max-width: 820px;
+      margin: auto;
+      text-align: center;
+      font-size: clamp(1.7rem, 4vw, 3rem);
+      line-height: 1.25;
+      color: #f1dfbf;
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(to bottom, #120f0b, #050403);
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 32px;
+      font-size: 1.25rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 34px;
+      border-radius: 999px;
+      background: #d8ad59;
+      color: #120f0b;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #b9a98d;
+      background: #050403;
+    }
+
+    @media (max-width: 850px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+  <div class="particles"></div>
+
+  <div class="hero-content">
+
+    <img src="logo-bioevolutiva.png"
+         alt="Bioevolutiva Consciente"
+         class="logo">
+
+    <div class="eyebrow">Terapia integral de transformación</div>
+
+    <h1>Bioevolutiva<br>Consciente</h1>
+
+      <p>Descifra lo que te bloquea.</p>
+      <p>Libera tu código de alma.</p>
+      <p>Integra tu ser completo.</p>
+
+      <div class="divider">——— ✦ ———</div>
+
+      <div class="keywords">Emoción · Cuerpo · Mensaje</div>
+    </div>
+  </header>
+
+  <section class="soft">
+    <div class="container">
+      <h2>Imagina un espacio donde tu cuerpo habla y tu alma se revela.</h2>
+
+      <p class="lead">
+        La Bioevolutiva Consciente es una herramienta de resolución integral que une cuatro lenguajes para descifrar y transformar lo que te bloquea, devolviéndote el poder de ser conSCiente de tu propia historia.
+      </p>
+
+      <p class="lead">
+        No solo entiendes el origen de tus bloqueos: accedes a una experiencia transformadora que integra mente, emoción, cuerpo y espíritu, guiándote de forma práctica hacia tu evolución personal.
+      </p>
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="container">
+      <h2>Cuatro lenguajes para liberar lo que te bloquea desde la raíz.</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Biodescodificación</h3>
+          <p>Lee los códigos grabados en tu cuerpo a través de síntomas, emociones y memorias heredadas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Numerología evolutiva</h3>
+          <p>Revela propósito, talentos, sombras y patrones repetitivos a partir de tu nombre y fecha de nacimiento.</p>
+        </div>
+
+        <div class="card">
+          <h3>Visualización creativa</h3>
+          <p>Permite dialogar con el inconsciente, reprogramar memorias y abrir nuevas rutas de sanación.</p>
+        </div>
+
+        <div class="card">
+          <h3>Metáforas</h3>
+          <p>Transforman desde adentro usando símbolos, historias e imágenes que el inconsciente comprende.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="container">
+      <h2>Hay cosas en tu vida que se repiten sin que entiendas por qué.</h2>
+
+      <p class="lead">
+        Relaciones que terminan igual, deudas que aparecen una y otra vez, dolores físicos sin causa aparente, o esa sensación de que algo te frena justo cuando estás a punto de avanzar.
+      </p>
+
+      <p class="lead">
+        No es casualidad. Y no, no estás roto. Existe una conversación silenciosa entre tu cuerpo, tu historia y tu alma que aún no has aprendido a escuchar.
+      </p>
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="quote">
+      No viniste a cargar lo que no te pertenece.<br>
+      Viniste a recordar quién eres.
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Hazlo conSCiente.</h2>
+
+      <p>
+        Atrévete a ir más profundo. Descubre la Bioevolutiva Consciente: una experiencia para comprender, liberar e integrar lo que tu cuerpo, tu historia y tu alma intentan mostrarte.
+      </p>
+
+      <a class="button" href="https://wa.me/521XXXXXXXXXX" target="_blank">
+        Quiero saber más
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    Bioevolutiva Consciente · Herramienta simbólica y terapéutica de autoconocimiento.
+  </footer>
+
+</body>
+</html>
