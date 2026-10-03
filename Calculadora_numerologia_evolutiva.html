@@ -4,50 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Numerología Evolutiva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Georgia',serif;background:#f5f0eb;color:#2d2d2d;min-height:100vh;padding:20px}
+body{font-family:'Jost','Segoe UI',sans-serif;font-weight:300;background:#f8f1e4;color:#4a3828;min-height:100vh;padding:20px}
 .app{max-width:960px;margin:0 auto}
-h1{text-align:center;font-size:26px;font-weight:600;color:#5a3e6b;margin-bottom:4px;letter-spacing:1px}
-.sub{text-align:center;font-size:13px;color:#8a7a9a;margin-bottom:24px;font-family:sans-serif}
-.card{background:#fff;border-radius:12px;border:1px solid #e0d5f0;padding:20px;margin-bottom:16px}
-.card h2{font-size:15px;font-weight:600;color:#5a3e6b;margin-bottom:14px;font-family:sans-serif;letter-spacing:.5px;text-transform:uppercase}
+h1{font-family:'Cormorant Garamond',Georgia,serif;text-align:center;font-size:34px;font-weight:600;color:#6b4a24;margin-bottom:4px;letter-spacing:1px}
+.sub{text-align:center;font-size:13px;color:#7d6a55;margin-bottom:24px;font-family:sans-serif}
+.card{background:#fff;border-radius:12px;border:1px solid #eadcc2;padding:20px;margin-bottom:16px}
+.card h2{font-size:15px;font-weight:600;color:#6b4a24;margin-bottom:14px;font-family:sans-serif;letter-spacing:.5px;text-transform:uppercase}
 .row{display:flex;gap:12px;flex-wrap:wrap}
 .field{flex:1;min-width:140px}
-label{display:block;font-size:10px;color:#8a7a9a;margin-bottom:4px;font-family:sans-serif;text-transform:uppercase;letter-spacing:.5px}
-input,select{width:100%;padding:8px 10px;border:1px solid #d8cce8;border-radius:8px;font-size:14px;font-family:sans-serif;background:#faf8ff;color:#2d2d2d;outline:none}
-input:focus,select:focus{border-color:#9b7bb8}
-.btn{display:block;width:100%;padding:13px;background:#5a3e6b;color:#fff;border:none;border-radius:10px;font-size:15px;font-family:sans-serif;cursor:pointer;letter-spacing:.5px;margin-top:12px}
-.btn:hover{background:#7a5a8f}
-.btn-secondary{background:#fff;color:#5a3e6b;border:1px solid #c0a0e0;margin-top:8px}
-.btn-secondary:hover{background:#f5f0fb}
+label{display:block;font-size:10px;color:#7d6a55;margin-bottom:4px;font-family:sans-serif;text-transform:uppercase;letter-spacing:.5px}
+input,select{width:100%;padding:8px 10px;border:1px solid #eadcc2;border-radius:8px;font-size:14px;font-family:sans-serif;background:#fdf8ee;color:#4a3828;outline:none}
+input:focus,select:focus{border-color:#b8893a}
+.btn{display:block;width:100%;padding:13px;background:#6b4a24;color:#fff;border:none;border-radius:10px;font-size:15px;font-family:sans-serif;cursor:pointer;letter-spacing:.5px;margin-top:12px}
+.btn:hover{background:#8a6430}
+.btn-secondary{background:#fff;color:#6b4a24;border:1px solid #d9bf8a;margin-top:8px}
+.btn-secondary:hover{background:#fdf8ee}
 .results{display:none}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 @media(max-width:600px){.grid2,.grid3{grid-template-columns:1fr 1fr}}
-.item{background:#faf8ff;border:1px solid #e0d5f0;border-radius:8px;padding:10px 14px}
-.item .lbl{font-size:10px;color:#9b7bb8;font-family:sans-serif;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
-.item .val{font-size:20px;font-weight:700;color:#5a3e6b;line-height:1.2}
-.item .desc{font-size:11px;color:#8a7a9a;font-family:sans-serif;margin-top:3px}
-.item .sig{font-size:11px;color:#6b4e7d;font-family:sans-serif;margin-top:3px;font-style:italic}
+.item{background:#fdf8ee;border:1px solid #eadcc2;border-radius:8px;padding:10px 14px}
+.item .lbl{font-size:10px;color:#b8893a;font-family:sans-serif;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.item .val{font-size:20px;font-weight:700;color:#6b4a24;line-height:1.2}
+.item .desc{font-size:11px;color:#7d6a55;font-family:sans-serif;margin-top:3px}
+.item .sig{font-size:11px;color:#8a6430;font-family:sans-serif;margin-top:3px;font-style:italic}
 .tabla-wrap{overflow-x:auto;margin-bottom:10px}
 .tabla-nombre{border-collapse:collapse;font-size:12px;font-family:monospace;margin-bottom:10px;white-space:nowrap}
-.tabla-nombre td{padding:5px 8px;border:1px solid #e0d5f0;text-align:center}
-.letra{background:#f0e8ff;font-weight:700;color:#5a3e6b}
-.nnum{background:#faf8ff;color:#5a3e6b}
-.subtot{background:#e8dff5;font-weight:700;color:#3d2c52;text-align:left!important;padding-left:10px}
+.tabla-nombre td{padding:5px 8px;border:1px solid #eadcc2;text-align:center}
+.letra{background:#fdf8ee;font-weight:700;color:#6b4a24}
+.nnum{background:#fdf8ee;color:#6b4a24}
+.subtot{background:#eadcc2;font-weight:700;color:#4a3828;text-align:left!important;padding-left:10px}
 .ausentes-list{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
-.ausente-badge{background:#ede4f7;color:#5a3e6b;border-radius:20px;padding:3px 12px;font-size:14px;font-weight:700;font-family:sans-serif}
-.sombra-box{background:#f0e8ff;border:1px solid #c8b0e0;border-radius:8px;padding:10px 16px;margin-top:12px;font-family:sans-serif;font-size:13px;color:#5a3e6b;line-height:1.6}
+.ausente-badge{background:#eadcc2;color:#6b4a24;border-radius:20px;padding:3px 12px;font-size:14px;font-weight:700;font-family:sans-serif}
+.sombra-box{background:#fdf8ee;border:1px solid #d9bf8a;border-radius:8px;padding:10px 16px;margin-top:12px;font-family:sans-serif;font-size:13px;color:#6b4a24;line-height:1.6}
 .wheel-wrap{display:flex;justify-content:center;margin:12px 0}
 .ref-table{width:100%;border-collapse:collapse;font-size:13px;font-family:sans-serif;margin-top:8px}
-.ref-table th{background:#e8dff5;color:#5a3e6b;padding:6px 10px;text-align:left;font-weight:600}
-.ref-table td{padding:5px 10px;border-bottom:1px solid #f0e8ff;color:#444;vertical-align:top}
-.ref-table tr:hover td{background:#faf8ff}
-.section-title{font-size:12px;color:#9b7bb8;font-family:sans-serif;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;margin-top:16px;font-weight:600}
-.persona-header{text-align:center;font-size:20px;color:#5a3e6b;font-weight:700;margin-bottom:4px}
-.persona-sub{text-align:center;font-size:13px;color:#8a7a9a;font-family:sans-serif;margin-bottom:16px}
-hr{border:none;border-top:1px solid #e0d5f0;margin:12px 0}
+.ref-table th{background:#eadcc2;color:#6b4a24;padding:6px 10px;text-align:left;font-weight:600}
+.ref-table td{padding:5px 10px;border-bottom:1px solid #fdf8ee;color:#444;vertical-align:top}
+.ref-table tr:hover td{background:#fdf8ee}
+.section-title{font-size:12px;color:#b8893a;font-family:sans-serif;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;margin-top:16px;font-weight:600}
+.persona-header{text-align:center;font-size:20px;color:#6b4a24;font-weight:700;margin-bottom:4px}
+.persona-sub{text-align:center;font-size:13px;color:#7d6a55;font-family:sans-serif;margin-bottom:16px}
+hr{border:none;border-top:1px solid #eadcc2;margin:12px 0}
 @media print{
   .no-print{display:none!important}
   .card{break-inside:avoid;border:1px solid #ccc}
@@ -55,12 +58,12 @@ hr{border:none;border-top:1px solid #e0d5f0;margin:12px 0}
   .app{max-width:100%}
 }
 
-/* ══ Pie de página Centro Ser Integral ══ */
-.csi-footer{max-width:960px;margin:24px auto 8px;padding:14px 10px 4px;border-top:1px solid #e0d5f0;text-align:center;font-family:sans-serif;font-size:12px;color:#8a7a9a;line-height:1.6}
-.csi-footer strong{color:#5a3e6b}
-.csi-footer a{color:#8a7a9a;text-decoration:none}
+/* ══ Pie de página ══ */
+.csi-footer{max-width:960px;margin:24px auto 8px;padding:14px 10px 4px;border-top:1px solid #eadcc2;text-align:center;font-family:sans-serif;font-size:12px;color:#7d6a55;line-height:1.6}
+.csi-footer strong{color:#6b4a24}
+.csi-footer a{color:#7d6a55;text-decoration:none}
 @media print{
-  .csi-footer{position:fixed;bottom:0;left:0;right:0;max-width:none;margin:0;padding:6px 0;background:#fff;font-size:10px;color:#5a3e6b}
+  .csi-footer{position:fixed;bottom:0;left:0;right:0;max-width:none;margin:0;padding:6px 0;background:#fff;font-size:10px;color:#6b4a24}
   body{padding-bottom:40px}
 }
 </style>
@@ -76,7 +79,7 @@ hr{border:none;border-top:1px solid #e0d5f0;margin:12px 0}
 </head>
 <body>
 <div class="app">
-  <a href="index.html" style="display:inline-block;margin-bottom:14px;font-size:13px;font-family:sans-serif;color:#5a3e6b;text-decoration:none">← Volver a Bioevolutiva Consciente</a>
+  <a href="index.html" style="display:inline-block;margin-bottom:14px;font-size:13px;font-family:sans-serif;color:#6b4a24;text-decoration:none">← Volver a Bioevolutiva Consciente</a>
   <h1>✦ Numerología Evolutiva ✦</h1>
   <p class="sub">Plantilla de mapa personal · Ingresa los datos para calcular</p>
 
@@ -114,7 +117,7 @@ hr{border:none;border-top:1px solid #e0d5f0;margin:12px 0}
       <div class="grid2" id="grid-nombre" style="margin-top:8px"></div>
 
       <div style="margin-top:12px">
-        <div class="lbl" style="font-size:10px;color:#9b7bb8;font-family:sans-serif;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Ausentes</div>
+        <div class="lbl" style="font-size:10px;color:#b8893a;font-family:sans-serif;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Ausentes</div>
         <div class="ausentes-list" id="ausentes-out"></div>
       </div>
     </div>
@@ -142,33 +145,33 @@ hr{border:none;border-top:1px solid #e0d5f0;margin:12px 0}
       <p style="font-family:sans-serif;font-size:13px;color:#555;line-height:1.6;margin-bottom:10px">Tu nombre completo tal como aparece en tu acta de nacimiento es tu "caja de regalos". Al convertir sus letras en números usando la tabla de conversión, obtienes un inventario de frecuencias activas para operar en el plano material.</p>
       <table class="ref-table">
         <tr><th>Cálculo</th><th>Significado</th></tr>
-        <tr><td><strong>Misión de Vida</strong><br><span style="font-size:11px;color:#9b7bb8">Suma de todo el nombre completo</span></td><td>Es el acuerdo central que tu alma firmó antes de encarnar. Responde a la pregunta "¿Para qué estoy aquí?" y representa la frecuencia misional con la que impactas y sanas al mundo.</td></tr>
-        <tr><td><strong>Mente</strong><br><span style="font-size:11px;color:#9b7bb8">Suma de tu(s) nombre(s) propio(s)</span></td><td>Representa al Maestro 1 (el consciente). Es tu estructura mental lógica, la forma en que piensas, procesas la información y manejas el día a día.</td></tr>
-        <tr><td><strong>Número del Corazón</strong><br><span style="font-size:11px;color:#9b7bb8">Suma de todas las vocales</span></td><td>Representa al Maestro 2 (la emoción). Nos revela lo que sientes en tu cuerpo ("cápsula"), tus deseos más íntimos, anhelos del alma y lo que verdaderamente te nutre en el amor.</td></tr>
-        <tr><td><strong>Número de Expresión</strong><br><span style="font-size:11px;color:#9b7bb8">Suma de todas las consonantes</span></td><td>Representa al Maestro 3 (el inconsciente y la palabra). Es tu canal de comunicación y cómo te proyectas afuera. En esta escuela, la palabra es la herramienta más poderosa porque es la que crea tu realidad.</td></tr>
-        <tr><td><strong>Números Ausentes</strong><br><span style="font-size:11px;color:#9b7bb8">o "Enfermos"</span></td><td>Los números presentes son tus recursos naturales. Los ausentes (los que no aparecen en tu nombre) son frecuencias que no puedes generar de forma natural y vienes a aprender o "pedir prestadas" a través de tus relaciones. Los números enfermos son dones que tienes pero que usas de manera inarmónica.</td></tr>
+        <tr><td><strong>Misión de Vida</strong><br><span style="font-size:11px;color:#b8893a">Suma de todo el nombre completo</span></td><td>Es el acuerdo central que tu alma firmó antes de encarnar. Responde a la pregunta "¿Para qué estoy aquí?" y representa la frecuencia misional con la que impactas y sanas al mundo.</td></tr>
+        <tr><td><strong>Mente</strong><br><span style="font-size:11px;color:#b8893a">Suma de tu(s) nombre(s) propio(s)</span></td><td>Representa al Maestro 1 (el consciente). Es tu estructura mental lógica, la forma en que piensas, procesas la información y manejas el día a día.</td></tr>
+        <tr><td><strong>Número del Corazón</strong><br><span style="font-size:11px;color:#b8893a">Suma de todas las vocales</span></td><td>Representa al Maestro 2 (la emoción). Nos revela lo que sientes en tu cuerpo ("cápsula"), tus deseos más íntimos, anhelos del alma y lo que verdaderamente te nutre en el amor.</td></tr>
+        <tr><td><strong>Número de Expresión</strong><br><span style="font-size:11px;color:#b8893a">Suma de todas las consonantes</span></td><td>Representa al Maestro 3 (el inconsciente y la palabra). Es tu canal de comunicación y cómo te proyectas afuera. En esta escuela, la palabra es la herramienta más poderosa porque es la que crea tu realidad.</td></tr>
+        <tr><td><strong>Números Ausentes</strong><br><span style="font-size:11px;color:#b8893a">o "Enfermos"</span></td><td>Los números presentes son tus recursos naturales. Los ausentes (los que no aparecen en tu nombre) son frecuencias que no puedes generar de forma natural y vienes a aprender o "pedir prestadas" a través de tus relaciones. Los números enfermos son dones que tienes pero que usas de manera inarmónica.</td></tr>
       </table>
 
       <div class="section-title">Parte 2 · La Fecha de Nacimiento (tu programa de vida)</div>
       <p style="font-family:sans-serif;font-size:13px;color:#555;line-height:1.6;margin-bottom:10px">Tu fecha de nacimiento no cambia; es un "plano fijo" o un archivo comprimido .ZIP interdimensional que contiene el diseño de tu estructura, tus retos y las memorias que vienes a desprogramar.</p>
       <table class="ref-table">
         <tr><th>Cálculo</th><th>Significado</th></tr>
-        <tr><td><strong>Lo que vine a aprender / hacer</strong><br><span style="font-size:11px;color:#9b7bb8">Día de nacimiento</span></td><td>Es tu energía de acción primaria y el aprendizaje central que elegiste integrar de manera práctica en la materia.</td></tr>
-        <tr><td><strong>Dones / Herramientas</strong><br><span style="font-size:11px;color:#9b7bb8">Mes de nacimiento</span></td><td>Son las potencialidades y dones espirituales (tenemos al menos seis) que elegiste para que te sostengan y faciliten tu camino hacia la misión de vida.</td></tr>
-        <tr><td><strong>A trabajar para mi árbol / Linaje</strong><br><span style="font-size:11px;color:#9b7bb8">Año de nacimiento</span></td><td>Es el año sumado y reducido. Representa el compromiso de tu alma para ordenar, liberar y sanar los miedos o bloqueos heredados de tu árbol familiar.</td></tr>
-        <tr><td><strong>Vidas Pasadas / Pasado</strong><br><span style="font-size:11px;color:#9b7bb8">Últimos dos dígitos del año</span></td><td>Nos muestra el conflicto o la "tecla rota" que quedó pendiente de resolver en encarnaciones pasadas y que hoy vuelve a aparecer en tu pantalla de aprendizaje.</td></tr>
-        <tr><td><strong>Camino de Vida / Programa</strong><br><span style="font-size:11px;color:#9b7bb8">Suma total de la fecha</span></td><td>Es la melodía de tu vida, la brújula que te muestra el ritmo y la danza que tu alma vino a bailar en la Tierra.</td></tr>
-        <tr><td><strong>Base</strong><br><span style="font-size:11px;color:#9b7bb8">Día + Mes + Año + Pasado (reducido)</span></td><td>Representa las habilidades estructurales y de soporte innatas con las que cuentas al nacer.</td></tr>
-        <tr><td><strong>Sombra</strong><br><span style="font-size:11px;color:#9b7bb8">Base + Pasado</span></td><td>Representa tu "personaje oculto", esos miedos o partes de ti que no quieres aceptar y que prefieres ver reflejados o proyectados en tus parejas y relaciones (tus espejos).</td></tr>
+        <tr><td><strong>Lo que vine a aprender / hacer</strong><br><span style="font-size:11px;color:#b8893a">Día de nacimiento</span></td><td>Es tu energía de acción primaria y el aprendizaje central que elegiste integrar de manera práctica en la materia.</td></tr>
+        <tr><td><strong>Dones / Herramientas</strong><br><span style="font-size:11px;color:#b8893a">Mes de nacimiento</span></td><td>Son las potencialidades y dones espirituales (tenemos al menos seis) que elegiste para que te sostengan y faciliten tu camino hacia la misión de vida.</td></tr>
+        <tr><td><strong>A trabajar para mi árbol / Linaje</strong><br><span style="font-size:11px;color:#b8893a">Año de nacimiento</span></td><td>Es el año sumado y reducido. Representa el compromiso de tu alma para ordenar, liberar y sanar los miedos o bloqueos heredados de tu árbol familiar.</td></tr>
+        <tr><td><strong>Vidas Pasadas / Pasado</strong><br><span style="font-size:11px;color:#b8893a">Últimos dos dígitos del año</span></td><td>Nos muestra el conflicto o la "tecla rota" que quedó pendiente de resolver en encarnaciones pasadas y que hoy vuelve a aparecer en tu pantalla de aprendizaje.</td></tr>
+        <tr><td><strong>Camino de Vida / Programa</strong><br><span style="font-size:11px;color:#b8893a">Suma total de la fecha</span></td><td>Es la melodía de tu vida, la brújula que te muestra el ritmo y la danza que tu alma vino a bailar en la Tierra.</td></tr>
+        <tr><td><strong>Base</strong><br><span style="font-size:11px;color:#b8893a">Día + Mes + Año + Pasado (reducido)</span></td><td>Representa las habilidades estructurales y de soporte innatas con las que cuentas al nacer.</td></tr>
+        <tr><td><strong>Sombra</strong><br><span style="font-size:11px;color:#b8893a">Base + Pasado</span></td><td>Representa tu "personaje oculto", esos miedos o partes de ti que no quieres aceptar y que prefieres ver reflejados o proyectados en tus parejas y relaciones (tus espejos).</td></tr>
       </table>
 
       <div class="section-title">Parte 3 · La Unión y Fases de la Vida (fórmula para madurar)</div>
       <p style="font-family:sans-serif;font-size:13px;color:#555;line-height:1.6;margin-bottom:10px">Al unir los códigos de tu nombre y tu fecha de nacimiento, el mapa cuántico se activa a través de la Fórmula para Madurar. Esta fórmula traza tus coordenadas dividiéndolas en 3 grandes etapas o períodos de vida.</p>
       <table class="ref-table">
         <tr><th>Período</th><th>Cómo se calcula</th></tr>
-        <tr><td><strong>Periodo 1</strong><br><span style="font-size:11px;color:#9b7bb8">0 a 35 años</span></td><td>Fase 3 − Base − Fase 1</td></tr>
-        <tr><td><strong>Periodo 2</strong><br><span style="font-size:11px;color:#9b7bb8">35 a 55 años</span></td><td>Ausentes − Equilibrio − Camino de Vida (Programa)</td></tr>
-        <tr><td><strong>Periodo 3</strong><br><span style="font-size:11px;color:#9b7bb8">55 años en adelante</span></td><td>Fase 4 − Misión de Vida − Fase 2</td></tr>
+        <tr><td><strong>Periodo 1</strong><br><span style="font-size:11px;color:#b8893a">0 a 35 años</span></td><td>Fase 3 − Base − Fase 1</td></tr>
+        <tr><td><strong>Periodo 2</strong><br><span style="font-size:11px;color:#b8893a">35 a 55 años</span></td><td>Ausentes − Equilibrio − Camino de Vida (Programa)</td></tr>
+        <tr><td><strong>Periodo 3</strong><br><span style="font-size:11px;color:#b8893a">55 años en adelante</span></td><td>Fase 4 − Misión de Vida − Fase 2</td></tr>
       </table>
       <div class="section-title" style="margin-top:14px">¿Cómo se calculan las 4 Fases?</div>
       <table class="ref-table">
@@ -187,7 +190,7 @@ hr{border:none;border-top:1px solid #e0d5f0;margin:12px 0}
         <tr><td><strong>2º número</strong></td><td>El MEDIO (hacia dónde dirigir la acción)</td></tr>
         <tr><td><strong>3er número</strong></td><td>El MOTIVO (el "para qué" de esa etapa)</td></tr>
       </table>
-      <p style="font-family:sans-serif;font-size:13px;color:#5a3e6b;line-height:1.6;margin-top:10px;font-style:italic">Por ejemplo: una coordenada 16 - 10 - 17 se lee: "Validarme (16) con herramientas (10) para mi camino espiritual (17)".</p>
+      <p style="font-family:sans-serif;font-size:13px;color:#6b4a24;line-height:1.6;margin-top:10px;font-style:italic">Por ejemplo: una coordenada 16 - 10 - 17 se lee: "Validarme (16) con herramientas (10) para mi camino espiritual (17)".</p>
     </div>
 
     <div class="card">
@@ -244,8 +247,7 @@ hr{border:none;border-top:1px solid #e0d5f0;margin:12px 0}
 
 
 <footer class="csi-footer">
-  Elaborado por <strong>Centro Ser Integral</strong> · México · © 2026 Todos los derechos reservados<br>
-  <a href="https://centroserintegral.org">centroserintegral.org</a>
+  <strong>Bioevolutiva Consciente</strong> · Herramienta desarrollada por <a href="https://centroserintegral.org" title="Centro Ser Integral">CSI</a> · © 2026 Todos los derechos reservados
 </footer>
 
 <script>
@@ -404,10 +406,10 @@ function calcular(){
       let sigComp=KARMAS[info.comp]||'';
       let sigRed=SIGNIF[info.red]||'';
       if(sigComp) sigLineas+=`<div style="font-size:12px;color:#555;font-family:sans-serif;line-height:1.5">${sigComp}</div>`;
-      if(sigRed)  sigLineas+=`<div style="font-size:12px;color:#7b5a8e;font-family:sans-serif;line-height:1.5">${sigRed}</div>`;
+      if(sigRed)  sigLineas+=`<div style="font-size:12px;color:#8a6430;font-family:sans-serif;line-height:1.5">${sigRed}</div>`;
     } else {
       let sigRed=SIGNIF[info.red]||'';
-      if(sigRed) sigLineas+=`<div style="font-size:12px;color:#7b5a8e;font-family:sans-serif;line-height:1.5">${sigRed}</div>`;
+      if(sigRed) sigLineas+=`<div style="font-size:12px;color:#8a6430;font-family:sans-serif;line-height:1.5">${sigRed}</div>`;
     }
     tabHtml+=`<div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:6px;flex-wrap:wrap">`;
     tabHtml+=`<table class="tabla-nombre" style="margin-bottom:0"><tr>`;
@@ -419,7 +421,7 @@ function calcular(){
     tabHtml+=`</div>`;
   });
   tabHtml+='</div>';
-  tabHtml+=`<div style="font-family:sans-serif;font-size:13px;color:#5a3e6b;margin-top:4px"><strong>Misión de Vida:</strong> ${valPal.map((v,i)=>display(v.info)).join(' + ')} = <strong>${display(mision)}</strong></div>`;
+  tabHtml+=`<div style="font-family:sans-serif;font-size:13px;color:#6b4a24;margin-top:4px"><strong>Misión de Vida:</strong> ${valPal.map((v,i)=>display(v.info)).join(' + ')} = <strong>${display(mision)}</strong></div>`;
   document.getElementById('tabla-out').innerHTML=tabHtml;
 
   // Grid nombre
@@ -446,13 +448,13 @@ function calcular(){
   if(ausentes.length>0){
     let badgesHtml=ausentes.map(a=>`<span class="ausente-badge">${a}</span>`).join('');
     let interpHtml=ausentes.map(a=>`
-      <div style="margin-top:10px;padding:10px 14px;background:#faf8ff;border:1px solid #e0d5f0;border-radius:8px">
-        <div style="font-size:11px;font-weight:700;color:#5a3e6b;font-family:sans-serif;margin-bottom:4px">Ausente ${a} — ${SIGNIF[a]||''}</div>
+      <div style="margin-top:10px;padding:10px 14px;background:#fdf8ee;border:1px solid #eadcc2;border-radius:8px">
+        <div style="font-size:11px;font-weight:700;color:#6b4a24;font-family:sans-serif;margin-bottom:4px">Ausente ${a} — ${SIGNIF[a]||''}</div>
         <div style="font-size:12px;color:#555;font-family:sans-serif;line-height:1.6">${AUSENTES_INTERP[a]||''}</div>
       </div>`).join('');
     document.getElementById('ausentes-out').innerHTML=badgesHtml+interpHtml;
   } else {
-    document.getElementById('ausentes-out').innerHTML='<span style="font-size:13px;color:#8a7a9a;font-family:sans-serif;font-style:italic">Ninguno</span>';
+    document.getElementById('ausentes-out').innerHTML='<span style="font-size:13px;color:#7d6a55;font-family:sans-serif;font-style:italic">Ninguno</span>';
   }
 
   // Grid fecha
@@ -490,9 +492,9 @@ function dibujarFecha(dia,mes,anio,programa,arbol,pasado,base,sombra){
   const svg=document.getElementById('wheel-fecha');
   const dv=display, muted='#aaa';
   const BOX_W=110, BOX_H=38, BOX_RX=6;
-  const COL={purple:'#e8dff5',teal:'#d4f0e8',coral:'#fde8e0'};
-  const STROKE={purple:'#9b7bb8',teal:'#4aaa88',coral:'#d07858'};
-  const TEXT={purple:'#3d2c52',teal:'#1a5a44',coral:'#7a3818'};
+  const COL={purple:'#eadcc2',teal:'#d4f0e8',coral:'#fde8e0'};
+  const STROKE={purple:'#b8893a',teal:'#4aaa88',coral:'#d07858'};
+  const TEXT={purple:'#4a3828',teal:'#1a5a44',coral:'#7a3818'};
 
   function box(x,y,w,h,fill,stroke,label,sub){
     let o=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${BOX_RX}" fill="${fill}" stroke="${stroke}" stroke-width="0.8"/>`;
@@ -513,10 +515,10 @@ function dibujarFecha(dia,mes,anio,programa,arbol,pasado,base,sombra){
     return`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#bbb" stroke-width="1"/>`;
   }
   function plus(x,y){
-    return`<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" style="font-family:sans-serif;font-size:16px;font-weight:700;fill:#9b7bb8">+</text>`;
+    return`<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" style="font-family:sans-serif;font-size:16px;font-weight:700;fill:#b8893a">+</text>`;
   }
   function igual(x,y){
-    return`<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" style="font-family:sans-serif;font-size:16px;font-weight:700;fill:#9b7bb8">=</text>`;
+    return`<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" style="font-family:sans-serif;font-size:16px;font-weight:700;fill:#b8893a">=</text>`;
   }
 
   const diaInfo=reducir(dia), mesInfo=reducir(mes);
@@ -599,13 +601,13 @@ function dibujarFormula(mision,camino,base,ausentes,equilibrio,f1,f2,f3,f4,sumaA
 
   let o=`<defs>
     <marker id="wa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 2L8 5L2 8" fill="none" stroke="#a07bbf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M2 2L8 5L2 8" fill="none" stroke="#b8893a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
   </defs>`;
 
   // Fondo
-  o+=`<circle cx="${cx}" cy="${cy}" r="210" fill="#f5f0fb" stroke="#e0d5f0" stroke-width="1"/>`;
-  o+=`<circle cx="${cx}" cy="${cy}" r="210" fill="none" stroke="#d8cce8" stroke-width="0.5"/>`;
+  o+=`<circle cx="${cx}" cy="${cy}" r="210" fill="#fdf8ee" stroke="#eadcc2" stroke-width="1"/>`;
+  o+=`<circle cx="${cx}" cy="${cy}" r="210" fill="none" stroke="#eadcc2" stroke-width="0.5"/>`;
 
   // Líneas punteadas de los puntos al centro
   pts.forEach(p=>{
@@ -628,28 +630,28 @@ function dibujarFormula(mision,camino,base,ausentes,equilibrio,f1,f2,f3,f4,sumaA
     let sx=p1.x+d1x/d1*rc, sy=p1.y+d1y/d1*rc;
     let d2x=cpx-p2.x, d2y=cpy-p2.y, d2=Math.sqrt(d2x*d2x+d2y*d2y);
     let ex=p2.x+d2x/d2*rc, ey=p2.y+d2y/d2*rc;
-    o+=`<path d="M${sx.toFixed(1)} ${sy.toFixed(1)} Q${cpx.toFixed(1)} ${cpy.toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}" fill="none" stroke="#b090d0" stroke-width="2" marker-end="url(#wa)"/>`;
+    o+=`<path d="M${sx.toFixed(1)} ${sy.toFixed(1)} Q${cpx.toFixed(1)} ${cpy.toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}" fill="none" stroke="#b8893a" stroke-width="2" marker-end="url(#wa)"/>`;
     // Caja de fase
     let fval=f.val?display(f.val).replace(' (K)','').replace(' (D)',''):'—';
     let isKarmaF=f.val?display(f.val).includes('(K)'):false;
     let isDharmaF=f.val?display(f.val).includes('(D)'):false;
     let fillF=isKarmaF?'#fff8ee':isDharmaF?'#eefaf6':'#fff';
-    let strokeF=isKarmaF?'#e8c97a':isDharmaF?'#7acbb0':'#c8b0e0';
+    let strokeF=isKarmaF?'#e8c97a':isDharmaF?'#7acbb0':'#d9bf8a';
     let tagF=isKarmaF?' <tspan font-size="9" fill="#b8860b">(K)</tspan>':isDharmaF?' <tspan font-size="9" fill="#2a9d7c">(D)</tspan>':'';
     o+=`<rect x="${(cpx-30).toFixed(1)}" y="${(cpy-20).toFixed(1)}" width="60" height="38" rx="10" fill="${fillF}" stroke="${strokeF}" stroke-width="1"/>`;
-    o+=`<text x="${cpx.toFixed(1)}" y="${(cpy-5).toFixed(1)}" text-anchor="middle" font-size="9" fill="#9b7bb8" font-family="sans-serif">${f.label}</text>`;
-    o+=`<text x="${cpx.toFixed(1)}" y="${(cpy+13).toFixed(1)}" text-anchor="middle" font-size="15" font-weight="700" fill="#5a3e6b" font-family="sans-serif">${fval}${tagF}</text>`;
+    o+=`<text x="${cpx.toFixed(1)}" y="${(cpy-5).toFixed(1)}" text-anchor="middle" font-size="9" fill="#b8893a" font-family="sans-serif">${f.label}</text>`;
+    o+=`<text x="${cpx.toFixed(1)}" y="${(cpy+13).toFixed(1)}" text-anchor="middle" font-size="15" font-weight="700" fill="#6b4a24" font-family="sans-serif">${fval}${tagF}</text>`;
   });
 
   // Flecha equilibrio → camino de vida
-  o+=`<line x1="${cx+rce+4}" y1="${cy}" x2="${cx+rp-rc-4}" y2="${cy}" stroke="#7b5a9e" stroke-width="1.5" marker-end="url(#wa)"/>`;
-  o+=`<text x="${cx+rp/2}" y="${cy-8}" text-anchor="middle" font-size="9" fill="#9b7bb8" font-family="sans-serif">Equilibrio</text>`;
+  o+=`<line x1="${cx+rce+4}" y1="${cy}" x2="${cx+rp-rc-4}" y2="${cy}" stroke="#8a6430" stroke-width="1.5" marker-end="url(#wa)"/>`;
+  o+=`<text x="${cx+rp/2}" y="${cy-8}" text-anchor="middle" font-size="9" fill="#b8893a" font-family="sans-serif">Equilibrio</text>`;
 
   // Nodos principales
   pts.forEach(p=>{
     let v=p.val?display(p.val).replace(' (K)','').replace(' (D)',''):'—';
     let lines=p.label;
-    o+=`<circle cx="${p.x}" cy="${p.y}" r="${rc}" fill="#6d3d8a" stroke="#fff" stroke-width="2.5"/>`;
+    o+=`<circle cx="${p.x}" cy="${p.y}" r="${rc}" fill="#8a6430" stroke="#fff" stroke-width="2.5"/>`;
     if(lines.length===2){
       o+=`<text x="${p.x}" y="${p.y-3}" text-anchor="middle" font-size="${v.length>4?12:16}" font-weight="700" fill="#fff" font-family="sans-serif">${v}</text>`;
     } else {
@@ -664,15 +666,15 @@ function dibujarFormula(mision,camino,base,ausentes,equilibrio,f1,f2,f3,f4,sumaA
     else{lx=p.x-offset-8;anchor='end';}
     lines.forEach((ln,j)=>{
       let extraY=(p.y<cy-50||p.y>cy+50)?j*14:(j*14-(lines.length-1)*7);
-      o+=`<text x="${lx.toFixed(1)}" y="${(ly+extraY).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="600" fill="#5a3e6b" font-family="sans-serif">${ln}</text>`;
+      o+=`<text x="${lx.toFixed(1)}" y="${(ly+extraY).toFixed(1)}" text-anchor="${anchor}" font-size="11" font-weight="600" fill="#6b4a24" font-family="sans-serif">${ln}</text>`;
     });
   });
 
   // Centro: Equilibrio
   let eq=equilibrio?display(equilibrio).replace(' (K)','').replace(' (D)',''):'—';
-  o+=`<circle cx="${cx}" cy="${cy}" r="${rce}" fill="#ede4f7" stroke="#c0a0e0" stroke-width="1.5"/>`;
-  o+=`<text x="${cx}" y="${cy-5}" text-anchor="middle" font-size="8" fill="#9b7bb8" font-family="sans-serif">Equilibrio</text>`;
-  o+=`<text x="${cx}" y="${cy+11}" text-anchor="middle" font-size="15" font-weight="700" fill="#5a3e6b" font-family="sans-serif">${eq}</text>`;
+  o+=`<circle cx="${cx}" cy="${cy}" r="${rce}" fill="#eadcc2" stroke="#d9bf8a" stroke-width="1.5"/>`;
+  o+=`<text x="${cx}" y="${cy-5}" text-anchor="middle" font-size="8" fill="#b8893a" font-family="sans-serif">Equilibrio</text>`;
+  o+=`<text x="${cx}" y="${cy+11}" text-anchor="middle" font-size="15" font-weight="700" fill="#6b4a24" font-family="sans-serif">${eq}</text>`;
 
   svg.innerHTML=o;
 }
