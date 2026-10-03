@@ -201,9 +201,33 @@ h1 {
       font-weight: bold;
       letter-spacing: 1px;
       text-transform: uppercase;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(216, 173, 89, 0.35);
+    }
 
+    .hero-cta {
+      margin-top: 40px;
+    }
+
+    .hero-cta small {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #b9a98d;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 14px;
+      color: #d8ad59;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(216, 173, 89, 0.5);
+    }
 
     .contact-grid {
       display: grid;
@@ -286,6 +310,11 @@ h1 {
       <div class="divider">——— ✦ ———</div>
 
       <div class="keywords">Emoción · Cuerpo · Mensaje</div>
+
+      <div class="hero-cta">
+        <a class="button" href="Calculadora_numerologia_evolutiva.html">Calcula tu numerología evolutiva</a>
+        <small>Gratis · Solo necesitas tu nombre y fecha de nacimiento</small>
+      </div>
     </div>
   </header>
 
@@ -316,6 +345,7 @@ h1 {
         <div class="card">
           <h3>Numerología evolutiva</h3>
           <p>Revela propósito, talentos, sombras y patrones repetitivos a partir de tu nombre y fecha de nacimiento.</p>
+          <a class="card-link" href="Calculadora_numerologia_evolutiva.html">Usar la calculadora →</a>
         </div>
 
         <div class="card">
